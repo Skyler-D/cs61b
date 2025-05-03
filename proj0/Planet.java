@@ -71,4 +71,13 @@ public class Planet{
 		}
 		return netFy;
 	}
+	
+	public void update(double dt, double fX, double fY){
+		double aX = fX / this.mass;
+		double aY = fY / this.mass;
+		this.xxVel += aX * dt;
+		this.yyVel += aY * dt;
+		this.xxPos += this.xxVel * dt;
+		this.yyPos += this.yyVel * dt;
+	}
 }
