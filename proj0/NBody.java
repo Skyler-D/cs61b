@@ -10,4 +10,22 @@ public class NBody{
 		double R = in.readDouble();
 		return R;
 	}
+	
+	public static Planet[] readPlanets(String fileName){
+		In in = new In(fileName);
+		in.readInt();
+		in.readDouble();		
+		Planet[] planets = new Planet[5];
+		for(int i = 0; i < 5; i++){
+			planets[i] = new Planet(
+				in.readDouble(), 
+				in.readDouble(), 
+				in.readDouble(), 
+				in.readDouble(), 
+				in.readDouble(), 
+				in.readString()
+			);
+		}
+		return planets;
+	}
 }
