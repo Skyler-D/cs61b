@@ -1,3 +1,8 @@
+/**
+ * Planet
+ * @author Skyler
+ * @source cs61b
+ */
 public class Planet{
 	public double xxPos = 0.0;
 	public double yyPos = 0.0;
